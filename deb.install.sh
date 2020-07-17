@@ -12,7 +12,7 @@ apt-get upgrade -y
 
 ### install needed application
 apt-get install net-tools ntp sysstat iptraf traceroute tcptraceroute pktstat bwm-ng whois httperf mailutils lynx \
-nast dsniff build-essential tcpdump sudo curl vim -y
+nast dsniff build-essential tcpdump sudo curl vim dnsutils -y
 
 ### adding SUDO_USER to sudo group
 usermod -a -G sudo $SUDO_USER
@@ -21,7 +21,7 @@ usermod -a -G sudo $SUDO_USER
 if ! grep -q '### ID NTP' /etc/ntp.conf
 then
 	echo "### ID NTP" >> /etc/ntp.conf
-	sed -i '18r debian/stretch/ntp-id.conf' /etc/ntp.conf
+	sed -i '18r ntp-id.conf' /etc/ntp.conf
 else
 	echo -e "ntp config updated"
 fi
@@ -44,3 +44,6 @@ service exim4 stop
 update-rc.d -f exim4 remove
 service rpcbind stop
 update-rc.d -f rpcbind remove
+
+### remove exim4
+apt purge exim4-config exim4-daemon-light
