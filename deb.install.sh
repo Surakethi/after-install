@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ### Your default information
-SUDO_USER='widiastono'
+SUDO_USER='noc'
 TIMEZONE='Asia/Jakarta'
-PORT_SSH=22
+PORT_SSH=2277
 export DEBIAN_FRONTEND=noninteractive
 
 ### update & upgrade debian
