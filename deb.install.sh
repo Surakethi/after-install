@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 ### Your default information
 SUDO_USER='noc'
 TIMEZONE='Asia/Jakarta'
