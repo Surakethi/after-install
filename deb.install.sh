@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Your default information
-SUDO_USER='noc'
+SUDO_USER='widiastono'
 TIMEZONE='Asia/Jakarta'
 PORT_SSH=2277
 export DEBIAN_FRONTEND=noninteractive
@@ -46,4 +46,4 @@ service rpcbind stop
 update-rc.d -f rpcbind remove
 
 ### remove exim4
-apt purge exim4-config exim4-daemon-light
+apt purge -y exim4-config exim4-daemon-light
